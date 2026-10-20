@@ -3630,6 +3630,42 @@ knitr::include_graphics(
 )
 ```
 
+## Q9 and Q28 Difference Heatmap
+
+```{r, echo=FALSE}
+knitr::include_graphics(
+  here::here(
+    "outputs",
+    "charts",
+    "q9_q28_difference_heatmap.png"
+  )
+)
+```
+
+## Q9 Small Multiples
+
+```{r, echo=FALSE}
+knitr::include_graphics(
+  here::here(
+    "outputs",
+    "charts",
+    "q9_small_multiples.png"
+  )
+)
+```
+
+## Q28 Small Multiples
+
+```{r, echo=FALSE}
+knitr::include_graphics(
+  here::here(
+    "outputs",
+    "charts",
+    "q28_small_multiples.png"
+  )
+)
+```
+
 ## NSS Question 9
 
 ```{r, echo=FALSE}
