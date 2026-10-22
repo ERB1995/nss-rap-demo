@@ -23,21 +23,32 @@ ni_ukprns <- c("10005343",
 )
                
 
-for (year in years) {
-  assign(paste0("nss_", year),
-         read.csv(paste0("//PR-DFE-FPASB01/ts_group/TEASB/Core Statistics Service/Higher Education/NSS/Public datasets/", year, "/NSS", year, "_fulldata.csv"))
-         %>% 
-           filter(UKPRN %in% ni_ukprns)) 
-}
+# Internal NSS source removed before publication.
+# Original code loaded NSS annual datasets from an internal network location.
 
-nss_2026 <- read_excel("//PR-DFE-FPASB01/ts_group/TEASB/Core Statistics Service/Higher Education/NSS/NSS 2026/NSS Results 2026.xlsx") %>% 
-  filter(UKPRN %in% ni_ukprns)
+# for (year in years) {
+#   assign(
+#     paste0("nss_", year),
+#     read.csv("<internal NSS source>")
+#       %>%
+#       filter(UKPRN %in% ni_ukprns)
+#   )
+# }
+
+# Internal NSS source removed before publication.
+#
+# nss_2026 <- read_excel(
+#   "<internal NSS data source>"
+# ) %>%
+#   filter(UKPRN %in% ni_ukprns)
  
-nss <- bind_rows(
-  mget(paste0("nss_", years)),
-  .id = "year"
-) %>%
-  mutate(year = as.integer(sub("^nss_", "", year)))
+# Internal NSS source removed before publication.
+#
+# nss <- bind_rows(
+#   mget(paste0("nss_", years)),
+#   .id = "year"
+# ) %>%
+#   mutate(year = as.integer(sub("^nss_", "", year)))
 
 ## 1.1 Sex Chart by Q9 ----
 library(tidyr)
